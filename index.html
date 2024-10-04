@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocabTrainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ارفع صورة الكلمات</h1>
+        
+        <input type="file" id="imageInput">
+        <button id="extractTextBtn">استخراج النص</button>
+        
+        <div id="wordContainer" style="display: none;">
+            <h2>الكلمات المستخرجة</h2>
+            <div id="wordsList"></div>
+            <button id="submitTranslations">حفظ الترجمات</button>
+        </div>
+        
+        <div id="testSection" style="display: none;">
+            <h2>ابدأ التسميع</h2>
+            <input type="number" id="wordCount" placeholder="عدد الكلمات">
+            <button id="startTest">ابدأ التسميع</button>
+            <div id="testContainer"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
